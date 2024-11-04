@@ -8,30 +8,30 @@ import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
-        Filme matrix = new Filme();
-        matrix.setNome("The Matrix");
-        matrix.setAnoDeLancamento(1999);
+        Filme matrix = new Filme("Matrix", 1999, "Lana Wachowsk");
+        // matrix.setNome("The Matrix");
+        //matrix.setAnoDeLancamento(1999);
         matrix.setDuracaoEmMinutos(135);
         matrix.setIncluidoNoPlano(true);
         matrix.avalia(10);
 
-        Filme johnWick = new Filme();
-        johnWick.setNome("John Wick");
-        johnWick.setAnoDeLancamento(2014);
+        Filme johnWick = new Filme("John Wick", 2014, "Chad Stahelski");
+        // johnWick.setNome("John Wick");
+        //johnWick.setAnoDeLancamento(2014);
         johnWick.setDuracaoEmMinutos(101);
         johnWick.setIncluidoNoPlano(true);
         johnWick.avalia(9);
 
-        Filme avatar = new Filme();
-        avatar.setNome("Avatar");
-        avatar.setAnoDeLancamento(2012);
+        Filme avatar = new Filme("Avatar", 2009,"James Cameron");
+        // avatar.setNome("Avatar");
+        //avatar.setAnoDeLancamento(2009);
         avatar.setDuracaoEmMinutos(400);
         avatar.setIncluidoNoPlano(true);
         avatar.avalia(10);
 
-        Serie laCasaDePapel = new Serie();
-        laCasaDePapel.setNome("La Casa de Papel");
-        laCasaDePapel.setAnoDeLancamento(2017);
+        Serie laCasaDePapel = new Serie("La Casa de Papel", 2017);
+        //laCasaDePapel.setNome("La Casa de Papel");
+        //laCasaDePapel.setAnoDeLancamento(2017);
         laCasaDePapel.setIncluidoNoPlano(true);
         laCasaDePapel.setAtiva(true);
         laCasaDePapel.setTemporadas(5);
@@ -61,7 +61,8 @@ public class Principal {
         listaDeFilmes.add(avatar);
         System.out.println("Tamanho da lista: " + listaDeFilmes.size());
         System.out.println("Primeiro filme: " +listaDeFilmes.get(0).getNome());
-        System.out.println(listaDeFilmes);
+        System.out.println("toString do filme: " + listaDeFilmes.get(0).toString());
+        System.out.println("Listagem: " + listaDeFilmes);
 
     }
 
