@@ -5,6 +5,8 @@ import br.com.alura.screenmatch.modelos.Serie;
 import br.com.alura.screenmatch.modelos.Titulo;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 
 public class PrincipalComListas {
     public static void main(String[] args) {
@@ -12,7 +14,7 @@ public class PrincipalComListas {
         matrix.avalia(10);
         Filme johnWick = new Filme("John Wick", 2014, "Chad Stahelski");
         johnWick.avalia(10);
-        Filme avatar = new Filme("Avatar", 2009,"James Cameron");
+        Filme avatar = new Filme("Avatar", 2009, "James Cameron");
         avatar.avalia(10);
         Serie laCasaDePapel = new Serie("La Casa de Papel", 2017);
 
@@ -22,13 +24,26 @@ public class PrincipalComListas {
         listaDeAsssistidos.add(avatar);
         listaDeAsssistidos.add(laCasaDePapel);
 
-        for (Titulo item: listaDeAsssistidos){
+        for (Titulo item : listaDeAsssistidos) {
             System.out.println(item.getNome());
             if (item instanceof Filme filme && filme.getClassificacao() > 2) {
                 System.out.println("Classificação: " + filme.getClassificacao());
-            } else if (item instanceof Serie serie && serie.get){
-                System.out.println("");
             }
         }
+        ArrayList<String> buscaPorArtista = new ArrayList<>();
+        buscaPorArtista.add("Adam Sandler");
+        buscaPorArtista.add("Gustavo Emiliano");
+        buscaPorArtista.add("Rodrigo Bettio");
+        buscaPorArtista.add("Júlio Estrela");
+        buscaPorArtista.add("Jany Vieira");
+        System.out.println(buscaPorArtista);
+
+        Collections.sort(buscaPorArtista);
+        System.out.println("Depois da ordenação: ");
+        System.out.println(buscaPorArtista);
+
+        System.out.println("Lista de títulos ordenados");
+        Collections.sort(listaDeAsssistidos);
+        System.out.println(listaDeAsssistidos);
     }
 }
