@@ -4,10 +4,7 @@ import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 import br.com.alura.screenmatch.modelos.Titulo;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.*;
 
 public class PrincipalComListas {
     public static void main(String[] args) {
@@ -19,7 +16,7 @@ public class PrincipalComListas {
         avatar.avalia(10);
         Serie laCasaDePapel = new Serie("La Casa de Papel", 2017);
 
-        ArrayList<Titulo> listaDeAsssistidos = new ArrayList<>();
+        List<Titulo> listaDeAsssistidos = new ArrayList<>();
         listaDeAsssistidos.add(matrix);
         listaDeAsssistidos.add(johnWick);
         listaDeAsssistidos.add(avatar);
@@ -31,7 +28,7 @@ public class PrincipalComListas {
                 System.out.println("Classificação: " + filme.getClassificacao());
             }
         }
-        ArrayList<String> buscaPorArtista = new ArrayList<>();
+        List<String> buscaPorArtista = new ArrayList<>();
         buscaPorArtista.add("Adam Sandler");
         buscaPorArtista.add("Gustavo Emiliano");
         buscaPorArtista.add("Rodrigo Bettio");
@@ -46,8 +43,8 @@ public class PrincipalComListas {
         System.out.println("Lista de títulos ordenados");
         Collections.sort(listaDeAsssistidos);
         System.out.println(listaDeAsssistidos);
-        listaDeAsssistidos.sort(Comparator.comparing(Titulo::getAnoDeLancamento));
         System.out.println("Ordenando por Ano de lançamento: ");
+        listaDeAsssistidos.sort(Comparator.comparing(Titulo::getAnoDeLancamento));
         System.out.println(listaDeAsssistidos);
     }
 }
